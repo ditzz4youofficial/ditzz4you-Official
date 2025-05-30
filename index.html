@@ -142,7 +142,20 @@
       <input type="text" id="nama" name="nama" placeholder="Nama kamu">
 
       <label for="bukti">Upload Bukti Transfer</label>
-      <input type="file" id="bukti" name="bukti">
+<input type="file" name="bukti" id="bukti" />
+
+<style>
+input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
 
       <button type="button" onclick="salinNomor()">Salin Nomor Dana</button>
       <a href="https://raw.githubusercontent.com/ditzz4youofficial/ditzz4you-Official/main/qris.jpg" target="_blank" class="btn">Lihat QRIS</a>
