@@ -58,7 +58,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin-top: 15px;
+      margin-bottom: 15px;
     }
     .info-buttons button {
       background-color: #007bff;
@@ -90,41 +90,36 @@
         <option value="Murid Suntik - Rp 1.000">Murid Suntik - Rp 1.000</option>
       </select>
 
-      <label for="note">Catatan Tambahan</label>
-      <input type="text" id="note" name="note" placeholder="Contoh: Kirim malam ya (opsional)" />
-
       <button type="submit">Kirim Pesanan</button>
     </form>
 
     <div class="info-box">
-      <p><strong>QRIS Pembayaran:</strong></p>
-      <img src="qris.jpg" alt="QRIS"/>
-
       <div class="info-buttons">
         <button onclick="salinDana()">📋 Salin Nomor Dana</button>
         <button onclick="bukaSaluran()">📣 Buka Saluran WhatsApp</button>
       </div>
+      <p><strong>QRIS Pembayaran:</strong></p>
+      <img src="qris.jpg" alt="QRIS"/>
     </div>
   </div>
 
   <script>
     const telegramToken = "7686291287:AAG30CVO6vD_4Dq715CwN7__FwoS1OjWRLQ";
     const telegramChatId = "7638073922";
-    const nomorTujuan = "6288274258885"; // Ganti dengan nomor WA kamu
+    const nomorTujuan = "6288274258885";
 
     document.getElementById("orderForm").addEventListener("submit", function(e) {
       e.preventDefault();
 
       const nama = document.getElementById("nama").value;
       const produk = document.getElementById("produk").value;
-      const note = document.getElementById("note").value;
 
       if (!nama || !produk) {
         alert("Harap isi Nama dan Produk terlebih dahulu.");
         return;
       }
 
-      const pesan = `📌 Pesanan Baru\n👤 Nama: ${nama}\n📦 Produk: ${produk}\n📝 Catatan: ${note || '-'}`;
+      const pesan = `📌 Pesanan Baru\n👤 Nama: ${nama}\n📦 Produk: ${produk}`;
 
       // Kirim ke Telegram
       fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
@@ -144,8 +139,8 @@
         }
       });
 
-      // Siapkan dan buka WhatsApp (manual)
-      const pesanWA = encodeURIComponent(`📌 *Pesanan Baru*\n👤 *Nama:* ${nama}\n📦 *Produk:* ${produk}\n📝 *Catatan:* ${note || '-'}`);
+      // Buka WhatsApp (manual)
+      const pesanWA = encodeURIComponent(`📌 *Pesanan Baru*\n👤 *Nama:* ${nama}\n📦 *Produk:* ${produk}`);
       window.open(`https://wa.me/${nomorTujuan}?text=${pesanWA}`, "_blank");
     });
 
