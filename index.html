@@ -104,63 +104,43 @@
   <h1>Digital Marketplace Ditzz4you</h1>
 
   <div class="container">
-    <div class="produk"><strong>Reseller Panel Bot</strong><br/><span class="harga">Harga: Rp 5.000/5K</span></div>
-    <div class="produk"><strong>Admin Panel Bot</strong><br/><span class="harga">Harga: Rp 12.000/12K</span></div>
-    <div class="produk"><strong>Partner Panel Bot</strong><br/><span class="harga">Harga: Rp 18.000/18K</span></div>
-    <div class="produk"><strong>Jasa Rename Script</strong><br/><span class="harga">Harga: Rp 10.000/10K</span></div>
-    <div class="produk"><strong>Script Bot Push Kontak X Jpm</strong><br/><span class="harga">Harga: Rp 10.000/10K</span></div>
-    <div class="produk"><strong>Suntik Sosmed</strong><br/><span class="harga">Harga: Rp 1.000/1K-100.000/100K</span></div>
-    <div class="produk"><strong>Suntik Saluran / Ch</strong><br/><span class="harga">Harga: Rp 1.000/1K-100.000/100K</span></div>
-    <div class="produk"><strong>Murid Suntik / Own Suntik Sosmed</strong><br/><span class="harga">Murid Suntik : 1K // Own Suntik : 3K</span></div>
+    <div class="container">
+    <h2>Form Pemesanan</h2>
+    <form id="orderForm">
+      <label for="nama">Nama Pembeli</label>
+      <input type="text" id="nama" name="nama" placeholder="Nama kamu" required>
 
-    <h2>Checkout</h2>
+      <label for="produk">Pilih Produk</label>
+      <select id="produk" name="produk" required>
+        <option value="">-- Pilih Produk --</option>
+        <option value="Reseller Panel Bot - Rp 5.000">Reseller Panel Bot - Rp 5.000</option>
+        <option value="Admin Panel Bot - Rp 12.000">Admin Panel Bot - Rp 12.000</option>
+        <option value="Partner Panel Bot - Rp 18.000">Partner Panel Bot - Rp 18.000</option>
+        <option value="Rename Script - Rp 10.000">Rename Script - Rp 10.000</option>
+      </select>
 
-    <div class="form-wrapper">
-      <form id="checkoutForm" method="POST" enctype="multipart/form-data" action="">
-        <label for="produk">Pilih Produk</label>
-        <select id="produk" name="produk" required>
-          <option value="">-- Pilih Produk --</option>
-          <option value="resellee">Reseller Panel Bot - Rp 5.000/5K</option>
-          <option value="admin">Admin Panel Bot - Rp 12.000/12K</option>
-          <option value="partner">Partner Panel Bot - Rp 18.000/18K</option>
-          <option value="jasa">Jasa Rename Script - Rp 10.000/10K</option>
-          <option value="script">Script Bot Push Kontak X jpm - Rp 10.000/10K</option>
-          <option value="suntik1">Suntik Sosmed - Rp 1.000/1K</option>
-          <option value="suntik2">Suntik Saluran - Rp 1.000/1K</option>
-          <option value="murid">Murid Suntik - Rp 1.000/1K</option>
-        </select>
+      <label for="note">Catatan Tambahan</label>
+      <input type="text" id="note" name="note" placeholder="Contoh: Kirim malam ya (opsional)">
 
-        <label for="nama">Nama Pembeli</label>
-        <input type="text" id="nama" name="nama" placeholder="Nama kamu" required />
-
-        <label for="bukti">Upload Bukti Transfer</label>
-        <input type="file" id="bukti" name="bukti" required />
-
-        <button type="button" onclick="salinNomor()">Salin Nomor Dana</button>
-        <a href="https://raw.githubusercontent.com/ditzz4youofficial/ditzz4you-Official/main/qris.jpg" target="_blank" class="btn">Lihat QRIS</a>
-        <a href="https://whatsapp.com/channel/0029VagGEcAFhWq8JtfxZZ3W" target="_blank" class="btn btn-hijau">Gabung Channel WA</a>
-
-        <button type="submit">Kirim Order</button>
-      </form>
-    </div>
+      <button type="submit">Kirim ke WhatsApp</button>
+    </form>
   </div>
 
   <script>
-    function salinNomor() {
-      const nomorDana = "085609018981";
-      navigator.clipboard.writeText(nomorDana).then(() => {
-        alert("Nomor DANA berhasil disalin: " + nomorDana);
-      }).catch(err => {
-        alert("Gagal menyalin nomor: " + err);
-      });
-    }
-
-    // Optional: prevent submit reload
-    document.getElementById("checkoutForm").addEventListener("submit", function(e) {
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
       e.preventDefault();
-      alert("Order berhasil dikirim (simulasi).");
-      // Tambahkan AJAX / pengolahan lanjutan di sini jika ada backend.
+
+      const nama = document.getElementById("nama").value;
+      const produk = document.getElementById("produk").value;
+      const note = document.getElementById("note").value;
+
+      const nomorTujuan = "6281234567890"; // Ganti dengan nomor WhatsApp kamu (pakai kode negara, tanpa plus)
+      const pesan = `📦 Pesanan Baru\n👤 Nama: ${nama}\n🛒 Produk: ${produk}\n📝 Catatan: ${note}\n\nSilakan kirim bukti transfer di sini.`;
+
+      const url = `https://wa.me/${nomorTujuan}?text=${encodeURIComponent(pesan)}`;
+      window.open(url, '_blank');
     });
   </script>
+
 </body>
-</html>
+  </html>
