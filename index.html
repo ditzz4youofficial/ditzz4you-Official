@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Marketplace Ditzz4you</title>
   <style>
     body {
@@ -15,20 +15,26 @@
       text-align: center;
     }
 
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
     .produk {
-  background-color: #fff; /* putih polos */
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  color: #000; /* teks jadi hitam agar kontras */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* opsional: bayangan */
+      background-color: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      color: #000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
     .form-wrapper {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
     h2 {
@@ -39,6 +45,7 @@
       display: block;
       margin: 10px 0 5px;
       text-align: left;
+      color: #fff;
     }
 
     input, select {
@@ -64,10 +71,26 @@
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
 
     a.btn-hijau {
       background-color: green;
+    }
+
+    label[for="bukti"] {
+      background: #f2f2f2;
+      color: #000;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    input[type="file"] {
+      display: none;
     }
 
     img {
@@ -80,78 +103,46 @@
 <body>
   <h1>Digital Marketplace Ditzz4you</h1>
 
-  <div class="produk">
-    <strong>Reseller Panel Bot</strong><br/>
-    <span class="harga">Harga: Rp 5.000/5K</span>
-  </div>
-
-  <div class="produk">
-    <strong>Admin Panel Bot</strong><br/>
-    <span class="harga">Harga: Rp 12.000/12K</span>
-  </div>
-
-  <div class="produk">
-    <strong>Partner Panel Bot</strong><br/>
-    <span class="harga">Harga: Rp 18.000/18K</span>
-  </div>
-
-  <div class="produk">
-    <strong>Jasa Rename Script</strong><br/>
-    <span class="harga">Harga: Rp 10.000/10K</span>
-  </div>
-
-  <div class="produk">
-    <strong>Script Bot Push Kontak X Jpm</strong><br/>
-    <span class="harga">Harga: Rp 10.000/10K</span>
-  </div>
-
-  <div class="produk">
-    <strong>Suntik Sosmed</strong><br/>
-    <span class="harga">Harga: Rp 1.000/1K-100.000/100K</span>
-    </div>
-
-  <div class="produk">
-    <strong>Suntik Saluran / Ch</strong><br/>
-    <span class="harga">Harga: Rp 1.000/1K-100.000/100K</span>
-  </div>
-
-  <div class="produk">
-    <strong>Murid Suntik / Own Suntik Sosmed</strong><br/>
-    <span class="harga">Murid Suntik : 1K // Own Suntik : 3K</span>
-  </div>
-
   <div class="container">
+    <div class="produk"><strong>Reseller Panel Bot</strong><br/><span class="harga">Harga: Rp 5.000/5K</span></div>
+    <div class="produk"><strong>Admin Panel Bot</strong><br/><span class="harga">Harga: Rp 12.000/12K</span></div>
+    <div class="produk"><strong>Partner Panel Bot</strong><br/><span class="harga">Harga: Rp 18.000/18K</span></div>
+    <div class="produk"><strong>Jasa Rename Script</strong><br/><span class="harga">Harga: Rp 10.000/10K</span></div>
+    <div class="produk"><strong>Script Bot Push Kontak X Jpm</strong><br/><span class="harga">Harga: Rp 10.000/10K</span></div>
+    <div class="produk"><strong>Suntik Sosmed</strong><br/><span class="harga">Harga: Rp 1.000/1K-100.000/100K</span></div>
+    <div class="produk"><strong>Suntik Saluran / Ch</strong><br/><span class="harga">Harga: Rp 1.000/1K-100.000/100K</span></div>
+    <div class="produk"><strong>Murid Suntik / Own Suntik Sosmed</strong><br/><span class="harga">Murid Suntik : 1K // Own Suntik : 3K</span></div>
+
     <h2>Checkout</h2>
 
     <div class="form-wrapper">
-    <form>
-      <label for="produk">Pilih Produk</label>
-      <select id="produk" name="produk">
-        <option value="">-- Pilih Produk --</option>
-        <option value="resellee">Reseller Panel Bot - Rp 5.000/5K</option>
-        <option value="admin">Admin Panel Bot - Rp 12.000/12K</option>
-        <option value="partner">Partner Panel Bot - Rp 18.000/18K</option>
-        <option value="jasa">Jasa Rename Script - Rp 10.000/10K</option>
-        <option value="script">Script Bot Push Kontak X jpm - Rp 10.000/10K</option>
-        <option value="suntik1">Suntik Sosmed - Rp 1.000/1K</option>
-        <option value="suntik2">Suntik Saluran - Rp 1.000/1K</option>
-        <option value="murid">Murid Suntik - Rp 1.000/1K</option>
-      </select>
+      <form id="checkoutForm" method="POST" enctype="multipart/form-data" action="">
+        <label for="produk">Pilih Produk</label>
+        <select id="produk" name="produk" required>
+          <option value="">-- Pilih Produk --</option>
+          <option value="resellee">Reseller Panel Bot - Rp 5.000/5K</option>
+          <option value="admin">Admin Panel Bot - Rp 12.000/12K</option>
+          <option value="partner">Partner Panel Bot - Rp 18.000/18K</option>
+          <option value="jasa">Jasa Rename Script - Rp 10.000/10K</option>
+          <option value="script">Script Bot Push Kontak X jpm - Rp 10.000/10K</option>
+          <option value="suntik1">Suntik Sosmed - Rp 1.000/1K</option>
+          <option value="suntik2">Suntik Saluran - Rp 1.000/1K</option>
+          <option value="murid">Murid Suntik - Rp 1.000/1K</option>
+        </select>
 
-      <label for="nama">Nama Pembeli</label>
-      <input type="text" id="nama" name="nama" placeholder="Nama kamu">
+        <label for="nama">Nama Pembeli</label>
+        <input type="text" id="nama" name="nama" placeholder="Nama kamu" required />
 
-      <label for="bukti" style="display:inline-block; padding:10px; background:#f2f2f2; border:1px solid #ccc; border-radius:5px; cursor:pointer;">
-  Upload Bukti Transfer
-</label>
-<input type="file" id="bukti" name="bukti" style="display:none;">
-      
-      <button type="button" onclick="salinNomor()">Salin Nomor Dana</button>
-      <a href="https://raw.githubusercontent.com/ditzz4youofficial/ditzz4you-Official/main/qris.jpg" target="_blank" class="btn">Lihat QRIS</a>
-      <a href="https://whatsapp.com/channel/0029VagGEcAFhWq8JtfxZZ3W" target="_blank" class="btn btn-hijau">Gabung Channel WA</a>
+        <label for="bukti">Upload Bukti Transfer</label>
+        <input type="file" id="bukti" name="bukti" required />
 
-      <button type="submit">Kirim Order</button>
-    </form>
+        <button type="button" onclick="salinNomor()">Salin Nomor Dana</button>
+        <a href="https://raw.githubusercontent.com/ditzz4youofficial/ditzz4you-Official/main/qris.jpg" target="_blank" class="btn">Lihat QRIS</a>
+        <a href="https://whatsapp.com/channel/0029VagGEcAFhWq8JtfxZZ3W" target="_blank" class="btn btn-hijau">Gabung Channel WA</a>
+
+        <button type="submit">Kirim Order</button>
+      </form>
+    </div>
   </div>
 
   <script>
@@ -159,11 +150,17 @@
       const nomorDana = "085609018981";
       navigator.clipboard.writeText(nomorDana).then(() => {
         alert("Nomor DANA berhasil disalin: " + nomorDana);
-      }, (err) => {
+      }).catch(err => {
         alert("Gagal menyalin nomor: " + err);
       });
     }
-  </script>
 
+    // Optional: prevent submit reload
+    document.getElementById("checkoutForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Order berhasil dikirim (simulasi).");
+      // Tambahkan AJAX / pengolahan lanjutan di sini jika ada backend.
+    });
+  </script>
 </body>
 </html>
