@@ -13,6 +13,16 @@
       text-align: center;
       padding: 20px;
     }
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+    }
     .container {
       background: rgba(0, 0, 0, 0.7);
       padding: 20px;
@@ -77,17 +87,18 @@
   </style>
 </head>
 <body>
+
   <h1>Digital Marketplace Ditzz4you</h1>
 
   <!-- Produk Saya -->
   <div class="produk-box"><strong>Reseller Panel Bot</strong><br>Harga: Rp 5.000/5K</div>
-<div class="produk-box"><strong>Admin Panel Bot</strong><br>Harga: Rp 12.000/12K</div>
-<div class="produk-box"><strong>Partner Panel Bot</strong><br>Harga: Rp 18.000/18K</div>
-<div class="produk-box"><strong>Jasa Rename Script</strong><br>Harga: Rp 10.000/10K</div>
-<div class="produk-box"><strong>Script Bot Push Kontak X Jpm</strong><br>Harga: Rp 10.000/10K</div>
-<div class="produk-box"><strong>Suntik Sosmed</strong><br>Harga: Rp 1.000/1K - Rp 100.000/100K</div>
-<div class="produk-box"><strong>Suntik Saluran / Ch</strong><br>Harga: Rp 1.000/1K - Rp 100.000/100K</div>
-<div class="produk-box"><strong>Murid Suntik / Own Suntik Sosmed</strong><br>Murid: Rp 1.000 | Own: Rp 3.000</div>
+  <div class="produk-box"><strong>Admin Panel Bot</strong><br>Harga: Rp 12.000/12K</div>
+  <div class="produk-box"><strong>Partner Panel Bot</strong><br>Harga: Rp 18.000/18K</div>
+  <div class="produk-box"><strong>Jasa Rename Script</strong><br>Harga: Rp 10.000/10K</div>
+  <div class="produk-box"><strong>Script Bot Push Kontak X Jpm</strong><br>Harga: Rp 10.000/10K</div>
+  <div class="produk-box"><strong>Suntik Sosmed</strong><br>Harga: Rp 1.000/1K - Rp 100.000/100K</div>
+  <div class="produk-box"><strong>Suntik Saluran / Ch</strong><br>Harga: Rp 1.000/1K - Rp 100.000/100K</div>
+  <div class="produk-box"><strong>Murid Suntik / Own Suntik Sosmed</strong><br>Murid: Rp 1.000 | Own: Rp 3.000</div>
 
   <div class="container">
     <h2>Form Pemesanan</h2>
@@ -157,7 +168,7 @@
         }
       });
 
-      // Buka WhatsApp (manual)
+      // Buka WhatsApp
       const pesanWA = encodeURIComponent(`📌 *Pesanan Baru*\n👤 *Nama:* ${nama}\n📦 *Produk:* ${produk}`);
       window.open(`https://wa.me/${nomorTujuan}?text=${pesanWA}`, "_blank");
     });
