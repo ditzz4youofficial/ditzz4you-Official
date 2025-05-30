@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Toko Always Hanzz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketplace Ditzz4you</title>
   <style>
     body {
-      background: #f0f0f0 url('always.jpg') no-repeat center center fixed;
+      font-family: Arial, sans-serif;
+      background: url('always.jpg') no-repeat center center fixed;
       background-size: cover;
-      font-family: sans-serif;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
+      color: #fff;
       text-align: center;
     }
-    h1 {
-  color: white;
-  text-shadow: 2px 2px 5px black
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
     }
-    .produk {
-      background: white;
-      margin: 10px auto;
-      padding: 15px;
+
+    h2 {
+      color: #fff;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      text-align: left;
+    }
+
+    input, select {
       width: 100%;
-      max-width: 90%;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: none;
     }
-    .harga {
-      color: black;
+
+    input[type="file"] {
+      background: #fff;
+    }
+
+    button, a.btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #ff6600;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.btn-hijau {
+      background-color: green;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -73,41 +112,43 @@
     <span class="harga">Murid Suntik : 1K // Own Suntik : 3K</span>
   </div>
 
-  <h2>Checkout</h2>
+  <div class="container">
+    <h2>Checkout</h2>
 
-  <form>
-    <label for="produk">Pilih Produk</label>
-    <select id="produk" name="produk">
-      <option value="">-- Pilih Produk --</option>
-      <option value="resellee">Reseller Panel Bot - Rp 5.000/5K</option>
-      <option value="admin">Admin Panel Bot - Rp 12.000/12K</option>
-      <option value="partner">Partner Panel Bot - Rp 18.000/18K</option>
-      <option value="jasa">Jasa Rename Script - Rp 10.000/10K</option>
-      <option value="script">Script Bot Push Kontak X jpm - Rp 10.000/10K</option>
-      <option value="suntitk1">Suntik Sosmed - Rp 1.000/1.K</option>
-      <option value="suntik2">Suntik Saluran - Rp 1.000/1K</option>
-      <option value="murid">Murid Suntik - Rp 1.000/1K</option>
-    </select>
+    <form>
+      <label for="produk">Pilih Produk</label>
+      <select id="produk" name="produk">
+        <option value="">-- Pilih Produk --</option>
+        <option value="resellee">Reseller Panel Bot - Rp 5.000/5K</option>
+        <option value="admin">Admin Panel Bot - Rp 12.000/12K</option>
+        <option value="partner">Partner Panel Bot - Rp 18.000/18K</option>
+        <option value="jasa">Jasa Rename Script - Rp 10.000/10K</option>
+        <option value="script">Script Bot Push Kontak X jpm - Rp 10.000/10K</option>
+        <option value="suntik1">Suntik Sosmed - Rp 1.000/1K</option>
+        <option value="suntik2">Suntik Saluran - Rp 1.000/1K</option>
+        <option value="murid">Murid Suntik - Rp 1.000/1K</option>
+      </select>
 
-    <label for="nama">Nama Pembeli</label>
-    <input type="text" id="nama" name="nama" placeholder="Nama kamu">
+      <label for="nama">Nama Pembeli</label>
+      <input type="text" id="nama" name="nama" placeholder="Nama kamu">
 
-    <label for="bukti">Upload Bukti Transfer</label>
-    <input type="file" id="bukti" name="bukti">
+      <label for="bukti">Upload Bukti Transfer</label>
+      <input type="file" id="bukti" name="bukti">
 
-    <button type="button" class="btn biru" onclick="salinNomor()">Salin Nomor Dana</button>
-    <a href="https://raw.githubusercontent.com/ditzz4youofficial/ditzz4you-Official/main/qris.jpg" class="btn kuning" target="_blank">Minta QR ke Owner</a>
-    <a href="https://whatsapp.com/channel/0029VagGECaFHWq8JtfxZZ3W" class="btn hijau" target="_blank">Gabung Channel WA</a>
+      <button type="button" onclick="salinNomor()">Salin Nomor Dana</button>
+      <a href="https://raw.githubusercontent.com/ditzz4youofficial/ditzz4you-Official/main/qris.jpg" target="_blank" class="btn">Lihat QRIS</a>
+      <a href="https://whatsapp.com/channel/0029VagGEcAFhWq8JtfxZZ3W" target="_blank" class="btn btn-hijau">Gabung Channel WA</a>
 
-    <button type="submit" class="btn kirim">Kirim Order</button>
-  </form>
+      <button type="submit">Kirim Order</button>
+    </form>
+  </div>
 
   <script>
     function salinNomor() {
-      const nomorDana = "085609018981"; // Ganti dengan nomor DANA kamu
-      navigator.clipboard.writeText(nomorDana).then(function() {
+      const nomorDana = "085609018981";
+      navigator.clipboard.writeText(nomorDana).then(() => {
         alert("Nomor DANA berhasil disalin: " + nomorDana);
-      }, function(err) {
+      }, (err) => {
         alert("Gagal menyalin nomor: " + err);
       });
     }
