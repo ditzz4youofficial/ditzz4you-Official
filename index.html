@@ -66,17 +66,41 @@
     .info-buttons button:hover {
       background-color: #0056b3;
     }
+    .produk-list {
+      text-align: left;
+      background-color: #333;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .produk-list p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
   <h1>Digital Marketplace Ditzz4you</h1>
   <div class="container">
+    
+    <!-- Tambahan deskripsi produk -->
+    <div class="produk-list">
+      <p><strong>📦 Daftar Produk dan Harga:</strong></p>
+      <p>Reseller Panel Bot — Rp 5.000/5K</p>
+      <p>Admin Panel Bot — Rp 12.000/12K</p>
+      <p>Partner Panel Bot — Rp 18.000/18K</p>
+      <p>Jasa Rename Script — Rp 10.000/10K</p>
+      <p>Script Bot Push Kontak X JPM — Rp 10.000/10K</p>
+      <p>Suntik Sosmed — Rp 1.000/1K</p>
+      <p>Suntik Saluran / Ch — Rp 1.000/1K</p>
+      <p>Murid Suntik — 1.000/1L</p>
+    </div>
+
     <h2>Form Pemesanan</h2>
     <form id="orderForm">
       <label for="nama">Nama Pembeli</label>
       <input type="text" id="nama" name="nama" placeholder="Nama kamu" required/>
 
-      <p><strong>Produk Saya:</strong></p>
       <label for="produk">Pilih Produk</label>
       <select id="produk" name="produk" required>
         <option value="">-- Pilih Produk --</option>
@@ -139,7 +163,7 @@
         }
       });
 
-      // Buka WhatsApp (manual)
+      // Buka WhatsApp
       const pesanWA = encodeURIComponent(`📌 *Pesanan Baru*\n👤 *Nama:* ${nama}\n📦 *Produk:* ${produk}`);
       window.open(`https://wa.me/${nomorTujuan}?text=${pesanWA}`, "_blank");
     });
