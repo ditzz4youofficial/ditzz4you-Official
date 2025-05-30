@@ -2,128 +2,100 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Digital Marketplace Ditzz4you</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       background: url('always.jpg') no-repeat center center fixed;
       background-size: cover;
-      margin: 0;
-      padding: 0;
-      color: #fff;
+      color: white;
+      font-family: Arial, sans-serif;
       text-align: center;
+      padding: 20px;
     }
-
     .container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 15px;
       max-width: 500px;
-      margin: 0 auto;
-      padding: 20px;
+      margin: auto;
     }
-
-    .produk {
-      background-color: #fff;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      color: #000;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .form-wrapper {
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    }
-
-    h2 {
-      color: #fff;
-    }
-
-    label {
+    label, select, input {
       display: block;
-      margin: 10px 0 5px;
-      text-align: left;
-      color: #fff;
+      width: 100%;
+      margin: 10px 0;
+      font-size: 16px;
     }
-
     input, select {
-      width: 100%;
       padding: 10px;
-      margin-bottom: 10px;
       border-radius: 5px;
       border: none;
     }
-
-    input[type="file"] {
-      background: #fff;
-    }
-
-    button, a.btn {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      background-color: #ff6600;
-      color: #fff;
+    button {
+      background-color: orange;
+      color: white;
       border: none;
-      border-radius: 5px;
-      text-decoration: none;
+      padding: 15px;
+      width: 100%;
+      border-radius: 10px;
+      font-size: 18px;
       font-weight: bold;
       cursor: pointer;
     }
-
-    a.btn-hijau {
-      background-color: green;
+    .info-box {
+      background-color: #1f1f1f;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      color: #fff;
     }
-
-    label[for="bukti"] {
-      background: #f2f2f2;
-      color: #000;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-
-    input[type="file"] {
-      display: none;
-    }
-
-    img {
-      width: 100%;
+    .info-box img {
+      max-width: 100%;
       border-radius: 10px;
       margin-top: 10px;
+    }
+    a.channel-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #00e676;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <h1>Digital Marketplace Ditzz4you</h1>
-
   <div class="container">
-    <div class="container">
     <h2>Form Pemesanan</h2>
     <form id="orderForm">
       <label for="nama">Nama Pembeli</label>
-      <input type="text" id="nama" name="nama" placeholder="Nama kamu" required>
+      <input type="text" id="nama" name="nama" placeholder="Nama kamu" required/>
 
       <label for="produk">Pilih Produk</label>
       <select id="produk" name="produk" required>
         <option value="">-- Pilih Produk --</option>
-        <option value="Reseller Panel Bot - Rp 5.000">Reseller Panel Bot - Rp 5.000</option>
-        <option value="Admin Panel Bot - Rp 12.000">Admin Panel Bot - Rp 12.000</option>
-        <option value="Partner Panel Bot - Rp 18.000">Partner Panel Bot - Rp 18.000</option>
-        <option value="Rename Script - Rp 10.000">Rename Script - Rp 10.000</option>
+        <option value="Reseller Panel Bot - Rp 5.000/5K">Reseller Panel Bot - Rp 5.000/5K</option>
+        <option value="Admin Panel Bot - Rp 12.000/12K">Admin Panel Bot - Rp 12.000/12K</option>
+        <option value="Partner Panel Bot - Rp 18.000/18K">Partner Panel Bot - Rp 18.000/18K</option>
+        <option value="Rename Script - Rp 10.000/10K">Rename Script - Rp 10.000/10K</option>
+        <option value="Script Bot Push Kontak X Jpm - Rp 10.000/10K">Script Bot Push Kontak X Jpm - Rp 10.000/10K</option>
+        <option value="Suntik Sosmed - Rp 1.000/1K">Suntik Sosmed - Rp 1.000/1K</option>
+        <option value="Suntik Saluran- Rp 1.000/1K">Suntik Saluran- Rp 1.000/1K</option>
+        <option value="Murid Suntik - Rp 1.000/1K">Murid Suntik - Rp 1.000/1K</option>
       </select>
 
       <label for="note">Catatan Tambahan</label>
-      <input type="text" id="note" name="note" placeholder="Contoh: Kirim malam ya (opsional)">
+      <input type="text" id="note" name="note" placeholder="Contoh: Kirim malam ya (opsional)" />
 
       <button type="submit">Kirim ke WhatsApp</button>
     </form>
+
+    <div class="info-box">
+      <p><strong>Nomor Dana:</strong>6285609018981</p>
+      <p><strong>QRIS Pembayaran:</strong></p>
+      <img src="qris.jpg" alt="QRIS"/>
+      <p><strong>Saluran WhatsApp:</strong></p>
+      <a class="channel-link" href="https://whatsapp.com/channel/0029VagGECaFHWq8JtfxZZ3W" target="_blank">Klik untuk masuk saluran</a>
+    </div>
   </div>
 
   <script>
@@ -134,13 +106,11 @@
       const produk = document.getElementById("produk").value;
       const note = document.getElementById("note").value;
 
-      const nomorTujuan = "6281234567890"; // Ganti dengan nomor WhatsApp kamu (pakai kode negara, tanpa plus)
-      const pesan = `📦 Pesanan Baru\n👤 Nama: ${nama}\n🛒 Produk: ${produk}\n📝 Catatan: ${note}\n\nSilakan kirim bukti transfer di sini.`;
-
+      const nomorTujuan = "6288274258885"; // Ganti ke nomor WhatsApp tujuan
+      const pesan = `🧾 Pesanan Baru\n👤 Nama: ${nama}\n📦 Produk: ${produk}\n📝 Catatan: ${note}`;
       const url = `https://wa.me/${nomorTujuan}?text=${encodeURIComponent(pesan)}`;
       window.open(url, '_blank');
     });
   </script>
-
 </body>
-  </html>
+</html>
